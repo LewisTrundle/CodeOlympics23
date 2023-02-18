@@ -1,0 +1,21 @@
+{
+  "name": "saladdog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "3d.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-loader": "^9.1.2",
+    "file-loader": "^6.2.0",
+    "three": "^0.149.0",
+    "webpack": "^5.75.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
