@@ -1,0 +1,2 @@
+flightradarapi==1.2.3
+requests==2.28.2
