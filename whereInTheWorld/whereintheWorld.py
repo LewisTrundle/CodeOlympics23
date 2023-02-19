@@ -19,8 +19,8 @@ lines = []
 index = 0
 print("Available Flights")
 while index < len(flight_numbers):
-    new_line = "\t".join(flight_numbers[index:index+10])
-    index += 10
+    new_line = "\t".join(flight_numbers[index:index+15])
+    index += 15
     print(new_line)
 
 print("Gimme a plane yo!")
