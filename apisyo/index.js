@@ -65,6 +65,31 @@ app.get("/quiz_question", (req, res) => {
     })
 })
 
+app.get("/funny", (req, res) => {
+    fs.readFile(`${appdir}/index.html`)
+    .then(content => {
+        res.setHeader("Content-Type", "text/html");
+        res.writeHead(200);
+        res.end(content);
+        return;
+    })
+    .catch(err => {
+        res.writeHead(404);
+        res.end("SOMETHING WENT WRONG");
+    })
+
+})
+
+app.get("//public/icons/salad_dog.png", (req, res) => {
+    fs.readFile(`${appdir}/salad_dog.png`)
+    .then(content => {
+        res.setHeader("Content-Type", "image/x-png");
+        res.writeHead(200);
+        res.end(content);
+        return;
+    })
+})
+
 
 
 const server = app.listen(PORT, HOST);
