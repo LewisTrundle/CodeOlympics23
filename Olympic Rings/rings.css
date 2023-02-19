@@ -1,0 +1,116 @@
+:root {
+  --ring-width: 15px;
+  --blue: #0180C3;
+  --yellow: #FEB131;
+  --black: #000000;
+  --red: #FF0000;
+  --cyan: #a5f2f3;
+}
+
+
+/* define the rings basic css style */
+.ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  border-style: solid;
+  border-width: var(--ring-width);
+}
+
+
+
+.blue {
+  border-color: var(--blue);
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+
+
+.yellow {
+  border-color: var(--yellow);
+  left: 95px;
+  top: 95px;
+}
+.yellow1 {
+  /* above the blue ring */
+  z-index: 1;
+  /* clip circle */
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.yellow2 {
+  /* under the blue ring */
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+
+
+.black {
+  border-color: var(--black);
+  left: 190px;
+  top: 0px;
+}
+.black1 {
+  z-index: -2;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.black2 {
+  z-index: 0;
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+
+
+.green {
+  border-color: #059341;
+  left: 285px;
+  top: 95px;
+}
+.green1 {
+  z-index: 1;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.green2 {
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+
+
+.red {
+  border-color: var(--red);
+  left: 380px;
+  top: 0px;
+}
+.red1 {
+  z-index: -2;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+.red2 {
+  z-index: 0;
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+
+
+
+
+.cyan {
+  border-color: var(--cyan);
+  left: 190px;
+  top: 190px;
+}
+.cyan1 {
+  z-index: 5;
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+}
+.cyan2 {
+  z-index: 5;
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+}
+.cyan3 {
+  z-index: -5;
+  clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
